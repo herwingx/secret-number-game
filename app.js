@@ -4,12 +4,13 @@
 
   let $text = document.querySelector('p');
 
-  $text.innerHTML = 'Ingresa un numero del 1 al 10'
+  $text.innerHTML = 'Ingresa un numero del 1 al maxNumber'
  */
 let maximosIntentos = 3;
 let intentos = 0;
 let secretNumber = 0;
-
+let ListRandomNumber = [];
+let maxNumber = 10;
 
 function setTextElement(element, text) {
   let elementHTML = document.querySelector(element);
@@ -17,9 +18,20 @@ function setTextElement(element, text) {
 }
 
 function generateSecretNumber() {
-  return Math.floor(Math.random() * 10 + 1);
+  let numberGenerate = Math.floor(Math.random() * maxNumber + 1);
+  console.log(ListRandomNumber);
+  console.log(numberGenerate);
+  if (ListRandomNumber.length == maxNumber) {
+    setTextElement("p", "Ya se sortearon todo los numeros disponibles");
+  } else {
+    if (ListRandomNumber.includes(numberGenerate)) {
+      return generateSecretNumber();
+    } else {
+      ListRandomNumber.push(numberGenerate);
+      return numberGenerate;
+    }
+  }
 }
-
 function checkIntent() {
   let userNumber = parseInt(document.getElementById("user-value").value);
   if (userNumber == secretNumber) {
@@ -47,7 +59,7 @@ function checkIntent() {
 
 function initialConditions() {
   setTextElement("h1", "Juego del numero secreto");
-  setTextElement("p", "Indica un número del 1 al 10: ");
+  setTextElement("p", `Indica un número del 1 al ${maxNumber}: `);
   secretNumber = generateSecretNumber();
   intentos = 1;
 }
