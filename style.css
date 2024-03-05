@@ -112,7 +112,7 @@ button {
     font-size: 32px;
     font-weight: 400;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .container {
         display: block;
         height: 90vh;
@@ -132,7 +132,7 @@ button {
     }
 
     h1 {
-        font-size: 3em;
+        font-size: 3.5em;
         padding-bottom: 2rem;
     }
 
@@ -161,6 +161,6 @@ button {
         margin: 1rem;
     }
     .container__image img {
-        height: 25vh;
+        height: 20vh;
     }
 }
