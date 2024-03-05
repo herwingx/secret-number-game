@@ -23,8 +23,9 @@
                 </div>
                 <input type="number" id="user-value" min="1" max="10" class="container__input">
                 <div class="chute container__botones">
-                    <button onclick="checkIntent();" class="container__boton">Intentar</button>
-                    <button onclick="restartGame();" class="container__boton" id="restart" disabled>Nuevo juego</button>
+                    <button onclick="checkIntent();" class="container__boton" id="start">Intentar</button>
+                    <button onclick="restartGame();" class="container__boton" id="restart" disabled>Reintentar</button>
+                    <button onclick="location.reload();" class="container__boton" id="new-game">Nuevo juego</button>
                 </div>
             </div>
             <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
