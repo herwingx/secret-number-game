@@ -112,3 +112,55 @@ button {
     font-size: 32px;
     font-weight: 400;
 }
+@media screen and (max-width: 375px) {
+    .container {
+        display: block;
+        height: 90vh;
+        width: 90vw;
+  
+    }
+    .container__texto {
+        text-align: center;
+        width: auto;
+        height: auto;
+    }
+
+
+    .container__botones {
+        display: block;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 3em;
+        padding-bottom: 2rem;
+    }
+
+    .texto__parrafo {
+        font-size: 1.2rem;
+    }
+
+    .container__boton {
+        margin-top: 1rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: auto;
+    }
+
+    #user-value {
+        padding: 1.2rem;
+        height: 3rem;
+    }
+
+    .container__image {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+    .container__image img {
+        height: 25vh;
+    }
+}
